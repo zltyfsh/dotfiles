@@ -1,10 +1,18 @@
 [alias]
+	bva = branch --all --verbose
 	ca = commit --amend --reuse-message=HEAD
 	co = checkout
 	cp = cherry-pick
+	d = diff
+	dc = diff --cached
+	last = log -1 HEAD
 	s = status
-	sg = log --graph --oneline
-	sg10 = log --graph --oneline -10
-	sg20 = log --graph --oneline -20
+	sg = log --all --decorate--graph --oneline
+	sg10 = sg -10
+	sg20 = sg -20
+
 [color]
 	ui = auto
+
+[push]
+	default = simple

@@ -9,15 +9,9 @@ alias tr2='tree -L 2'
 alias tr3='tree -L 3'
 
 # If we have ack-grep, but not ack, alias ack to ack-grep
-ACK=$(which ack)
-ACKGREP=$(which ack-grep)
-if [ "x$ACKGREP" != "x" ] && [ "x$ACK" == "x" ]; then
-  alias ack="$ACKGREP"
+if command -v ack-grep >/dev/null && ! command -v ack >/dev/null; then
+  alias ack="$(command -v ack-grep)"
 fi
-
-# source other bash files
-[[ -f $HOME/.dotfiles/bash_export ]] && source $HOME/.dotfiles/bash_export
-[[ -f $HOME/.dotfiles/bash_prompt ]] && source $HOME/.dotfiles/bash_prompt
 
 # source local bash files
 [[ -f $HOME/.local/bash_aliases ]] && source $HOME/.local/bash_aliases
