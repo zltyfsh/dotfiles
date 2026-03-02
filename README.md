@@ -24,6 +24,7 @@ cat <<EOF >>$HOME/.bashrc
 [ -d $HOME/.dotfiles ] && source $HOME/.dotfiles/*.sh
 
 EOF
+
 ```
 
 ## Git
