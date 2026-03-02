@@ -23,8 +23,8 @@ cat <<EOF >>$HOME/.bashrc
 # Source the bash setup files
 if [ -d \$HOME/.dotfiles ]; then
 	for i in \$HOME/.dotfiles/*.sh; do
-		if [ -r "$i" ]; then
-			source "$i"
+		if [ -r "\$i" ]; then
+			source "\$i"
 		fi
 	done
 	unset i
