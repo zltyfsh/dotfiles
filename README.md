@@ -21,8 +21,14 @@ Add the following statements to the `$HOME/.bashrc` file:
 cat <<EOF >>$HOME/.bashrc
 
 # Source the bash setup files
-[ -d $HOME/.dotfiles ] && source $HOME/.dotfiles/*.sh
-
+if [ -d \$HOME/.dotfiles ]; then
+	for i in \$HOME/.dotfiles/*.sh; do
+		if [ -r "$i" ]; then
+			source "$i"
+		fi
+	done
+	unset i
+fi
 EOF
 
 ```
