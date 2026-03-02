@@ -10,9 +10,3 @@ if command -v ack-grep >/dev/null && ! command -v ack >/dev/null; then
 	alias ack="$(command -v ack-grep)"
 fi
 
-# Install kubectl alias, if we have kubectl...
-if command -v kubectl >/dev/null; then
-	alias k=kubectl
-	alias ks='kubectl get events --sort-by metadata.creationTimestamp'
-
-	# This is strict
