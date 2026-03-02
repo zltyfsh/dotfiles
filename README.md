@@ -18,7 +18,7 @@ this _.dotfiles_ directory in the home directory.
 Add the following statements to the `$HOME/.bashrc` file:
 
 ```sh
-cat <<EOF >$HOME/.bashrc
+cat <<EOF >>$HOME/.bashrc
 
 # Source the bash setup files
 [ -d $HOME/.dotfiles ] && source $HOME/.dotfiles/*.sh
