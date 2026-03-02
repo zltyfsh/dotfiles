@@ -7,8 +7,7 @@ Also notice that the files only support Debian and Ubuntu OSes.
 ## Installation
 
 ```sh
-cd
-git clone https://github.com/hemmop/dotfiles.git .dotfiles
+git clone https://github.com/hemmop/dotfiles.git $HOME/.dotfiles
 ```
 
 All references below assumes that the repository is cloned in
