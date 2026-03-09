@@ -5,7 +5,7 @@
 # for example: https://github.com/microsoft/cascadia-code
 
 function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -cwd-max-depth 3 -error $? -max-width 80 -modules "venv,user,cwd,kube,git,exit,root")"
+    PS1="$($GOPATH/bin/powerline-go -cwd-max-depth 3 -error $? -max-width 80 -modules "venv,user,cwd,kube,git,root")"
 
     # Uncomment the following line to automatically clear errors after showing
     # them once. This not only clears the error for powerline-go, but also for
