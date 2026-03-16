@@ -18,4 +18,4 @@
 	excludesfile = ~/.dotfiles/gitignore
 
 [push]
-	default = simple
+	default = current
