@@ -1,0 +1,9 @@
+#!/bin/bash
+
+server=10.214.32.2
+
+#if [[ $# -ge 0 && $1 == test ]]; then
+	#server=
+#fi
+
+kubectl vsphere login --insecure-skip-tls-verify --vsphere-username percar --server https://${server}

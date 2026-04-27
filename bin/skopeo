@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -z "$@" ]; then
+  echo "$(basename $0) [options]"
+  exit
+fi
+
+docker run docker://quay.io/skopeo/stable:latest "$@"
