@@ -1,8 +1,8 @@
 #!/bin/sh
 
-if [ -z "$@" ]; then
+if [ $# -eq 0 ]; then
   echo "$(basename $0) [options]"
   exit
 fi
 
-docker run docker://quay.io/skopeo/stable:latest "$@"
+docker run --rm quay.io/skopeo/stable:latest "$@"
